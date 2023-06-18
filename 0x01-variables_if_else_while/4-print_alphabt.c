@@ -11,7 +11,6 @@ int main(void)
 	{
 		if (i == 101 || i == 113)
 		{
-			i++;
 			continue;
 		}
 		putchar(i);

@@ -5,7 +5,7 @@
 /**
  * num_check - checks for a number
  * @str: array
- * Return : always 0
+ * Return: always 0
  */
 int num_check(char *str)
 {

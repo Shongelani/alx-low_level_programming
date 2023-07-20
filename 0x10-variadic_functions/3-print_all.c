@@ -34,11 +34,13 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s%s", separator, s);
 				break;
+			default:
+				ptr++;
+				continue;
 		}
 		separator = ", ";
 		ptr++;
 	}
-
 	printf("\n");
 	va_end(args);
 }

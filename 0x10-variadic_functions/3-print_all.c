@@ -8,17 +8,15 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	char *separator = "", *s;
+	char *s, *separator = "";
+	const char *ptr = format;
 	va_list args;
 
 	va_start(args, format);
-	if (format)
+	while (*ptr != '\0')
 	{
-		while (format[i])
+		switch (*ptr)
 		{
-			switch (format[i])
-			{
 			case 'c':
 				printf("%s%c", separator, va_arg(args, int));
 				break;
@@ -29,24 +27,18 @@ void print_all(const char * const format, ...)
 				printf("%s%f", separator, va_arg(args, double));
 				break;
 			case 's':
-				s = va_arg(args, char*);
+				s = va_arg(args, char *);
 				if (s == NULL)
 				{
 					printf("(nil)");
 				}
-				else
-				{
-					printf("%s%s", separator, s);
-				}
+				printf("%s%s", separator, s);
 				break;
-			default:
-				i++;
-				continue;
-			}
-			separator = ", ";
-			i++;
 		}
+		separator = ", ";
+		ptr++;
 	}
+
 	printf("\n");
 	va_end(args);
 }

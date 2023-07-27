@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * add_nod - a function that adds a new node at the beginning of a list_t list.
+ * add_node - a function that adds a new node at the beginning of a list_t list
  * @head: pointer to the list_t list
- * @string: string to add to the node
- * Return:  the address of the new element, or NULL if it failed
+ * @str: string to add to the node
+ * Return: the address of the new element, or NULL if it failed
  */
 list_t *add_node(list_t **head, const char *str)
 {

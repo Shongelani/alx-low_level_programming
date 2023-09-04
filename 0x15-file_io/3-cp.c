@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	buffer = create_buffer(argv[2]);
 	file_from = open(argv[1], O_RDONLY);
 	read_byte = read(file_from, buffer, 1024);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (read_byte == -1 || file_from == -1)

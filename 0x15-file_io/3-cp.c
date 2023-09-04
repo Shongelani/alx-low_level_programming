@@ -8,7 +8,7 @@ char *create_buffer(char *filename)
 {
 	char *buffer = malloc(sizeof(char) * 1024);
 
-	if (!buffer)
+	if (buffer == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);

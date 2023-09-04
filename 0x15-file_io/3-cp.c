@@ -26,6 +26,7 @@ char *create_buffer(char *filename)
 void _close(int file_descr)
 {
 	int close_byte;
+
 	close_byte = close(file_descr);
 
 	if (close_byte == -1)
